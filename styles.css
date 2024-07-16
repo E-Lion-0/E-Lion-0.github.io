@@ -1,0 +1,284 @@
+@import "transition.hackpack.min.css";
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,
+    "Segoe UI",Roboto,"Helvetica Neue",
+    Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {
+    background-color: #fff;
+    color: #563364;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #563364;
+    text-decoration: none;
+}
+
+#hero {
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.main{
+    display: block;
+
+}
+
+
+/* Animation keyframes */
+@keyframes zoomBlur {
+    0% {
+        filter: blur(0);
+        opacity: 1;
+    }
+    100% {
+        zoom: 10%;
+        scale: 1.3;
+        filter: blur(2px);
+        opacity: 1;
+    }
+}
+
+/* Hero content styles */
+.hero-content {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("hero-image.jpg") no-repeat center center/cover;
+    animation: zoomBlur 2s ease-out forwards;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 2s ease-out ;
+}
+
+.hero-content.animated .hero-overlay {
+    opacity: 1;
+}
+
+.hero-overlay h2,
+.hero-overlay p {
+    margin: 0;
+}
+
+.hero-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #563364;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#servizi, #faq, #contatti {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+}
+.chi{
+    color: #563364;
+    font-size: 40px;
+    margin-bottom: 50px;
+
+}
+.who {
+    text-align: center; /* Per centrare il titolo */
+}
+
+.who-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width: 1090px; /* Dimensione massima totale */
+    min-width: 640px; /* Dimensione minima totale */
+    margin: auto; /* Per centrare il contenuto */
+}
+
+.faq-item {
+    flex: 1 0 30%; /* Riquadro occupa massimo il 30% dello spazio */
+    margin-bottom: 20px;
+    padding: 10px; /* Aggiungi padding per separare gli elementi */
+
+}
+.faq-item img{
+    max-width: 100%; /* Larghezza massima dell'immagine */
+    height: auto; /* Altezza automatica proporzionale */
+}
+
+
+/* Media query per schermi più stretti di 1090px */
+@media (max-width: 1090px) {
+    .faq-item img {
+        max-width: 80%; /* Riduce la larghezza dell'immagine al 80% della larghezza disponibile */
+    }
+}
+@media (max-width: 640px) {
+    .who-content {
+        flex-direction: column; /* Disposizione in colonna sotto i 640px */
+    }
+
+    .faq-item {
+        flex: 1 0 100%; /* Riquadri occupano tutto lo spazio in colonna */
+        align-content: center;
+        width: calc(100% - 20px);
+    }
+
+}
+
+
+
+h3 {
+    color: #563364;
+    background: transparent;
+}
+
+
+form {
+    min-width: 300px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+}
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form,
+.info-contatti {
+    flex: 1 1 48%; /* Riquadri occupano massimo il 48% dello spazio */
+    margin-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+    .contacts {
+        flex-direction: column; /* Disposizione in colonna sotto i 640px */
+    }
+
+    .form,
+    .info-contatti {
+        flex: 1 1 100%; /* Riquadri occupano tutto lo spazio in colonna */
+    }
+}
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #563364;
+
+}
+
+.info-box p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.submit-container {
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+}
+
+.submit {
+    background-color: #563364; /* Colore di sfondo */
+    color: #fff; /* Colore del testo */
+    padding: 15px 30px; /* Padding interno */
+    font-size: 1.2rem; /* Dimensione del testo */
+    border: none; /* Rimuove il bordo */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    border-radius: 5px; /* Bordo arrotondato */
+    transition: background-color 0.3s ease; /* Transizione del colore di sfondo */
+    max-width: 200px; /* Larghezza massima */
+    width: 100%; /* Occupa tutto lo spazio disponibile */
+}
+
+.submit:hover {
+    background-color: #452b52; /* Cambia colore al passaggio del mouse */
+}
+.form-element{
+    font-weight: 700;
+    line-height: 1.5;
+
+}
+
+
