@@ -10,129 +10,341 @@
     <header>
         <div class="container">
             <div class="logo">
-                <h1>PlaceHolder</h1>
+                <h1>MutuoFirenze</h1>
             </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#servizi">Chi siamo/sono</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
+                    <li><a href="#servizi">Servizi Offerti</a></li>
+                    <li><a href="#contatti">Contattaci</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main">
 
-
-        <div class="hero-content" >
+        <div class="hero-content" id="home">
             <div class="hero-overlay">
                 <h1>Benvenuti alla nostra consulenza finanziaria</h1>
                 <button class="hero-button">Prenota consulenza</button>
             </div>
         </div>
 
+        <div class="benvenuto">
+            <div class="titolo"><h2>Benvenuti a MutuoFirenze</h2></div>
+            <div class="testo">
+                <p>MutuoFirenze offre consulenza professionale in tutta Italia,
+                aiutandoti a realizzare i tuoi obiettivi con un tocco personale.
+                    La prima consulenza è sempre gratuita.</p>
+            </div>
+        </div>
 
+        <div class="forme">
+
+            <div class='form-container' id="contatti">
+
+                <header>
+                    <h1>Modulo di richiesta</h1>
+                    <div class='prodotto'>
+                        <label for='mutuo'>Prodotto</label>
+                        <div class='radio-container'>
+                            <input checked='' id='mutuo' name='prodotto' type='radio' value='0-25'>
+                            <label for='mutuo'>Mutuo</label>
+                            <input id='prestito' name='prodotto' type='radio' value='25-50'>
+                            <label for='prestito'>Prestito e CQS</label>
+                            <input id='leasing' name='prodotto' type='radio' value='50-100'>
+                            <label for='leasing'>Leasing</label>
+                            <input id='vitalizio' name='prodotto' type='radio' value='100+'>
+                            <label for='vitalizio'>Vitalizio</label>
+                        </div>
+                    </div>
+
+                    <div class='set'>
+                        <div class='form-element' id="importo">
+                            <label for='importo'>Importo</label>
+                            <input id='euro' placeholder="es: €140.000" type="text">
+                        </div>
+                        <div class='form-element' id="durata">
+                            <label for='anni'>Durata</label>
+                            <select id="anni" name="menu">
+                                <option value="1">1 anno</option>
+                                <option value="2">2 anni</option>
+                                <option value="3">3 anni</option>
+                                <option value="4">4 anni</option>
+                                <option value="5">5 anni</option>
+                                <option value="6">6 anni</option>
+                                <option value="7">7 anni</option>
+                                <option value="8">8 anni</option>
+                                <option value="9">9 anni</option>
+                                <option value="10">10 anni</option>
+                                <option value="11">11 anni</option>
+                                <option value="12">12 anni</option>
+                                <option value="13">13 anni</option>
+                                <option value="14">14 anni</option>
+                                <option value="15">15 anni</option>
+                                <option value="16">16 anni</option>
+                                <option value="17">17 anni</option>
+                                <option value="18">18 anni</option>
+                                <option value="19">19 anni</option>
+                                <option value="20">20 anni</option>
+                                <option value="21">21 anni</option>
+                                <option value="22">22 anni</option>
+                                <option value="23">23 anni</option>
+                                <option value="24">24 anni</option>
+                                <option value="25">25 anni</option>
+                                <option value="26">26 anni</option>
+                                <option value="27">27 anni</option>
+                                <option value="28">28 anni</option>
+                                <option value="29">29 anni</option>
+                                <option value="30">30 anni</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class='set'>
+                        <div class='form-element' id="provincia">
+                            <label for='Firenze'>Provincia richiesta</label>
+                            <div class='radio-container'>
+                                <input checked='' id='Firenze' name='pet-gender' type='radio' value='Firenze'>
+                                <label for='Firenze'>Firenze</label>
+                                <input id='Fuori Firenze' name='pet-gender' type='radio' value='male'>
+                                <label for='Fuori Firenze'>Fuori Firenze</label>
+                            </div>
+                        </div>
+                        <div id="finalita-mutuo" class='form-element'>
+                            <label for='mutuo'>Finalità del Mutuo</label>
+                            <select id="mutuo-menu" name="menu">
+                                <option value="opzione1">Acquisto prima casa</option>
+                                <option value="opzione2">Surroga</option>
+                                <option value="opzione3">Acquisto seconda casa</option>
+                                <option value="opzione4">Ristrutturazione</option>
+                                <option value="opzione5">Acquisto + Ristrutturazione</option>
+                                <option value="opzione6">Liquidità</option>
+                                <option value="opzione7">Acquisto in Asta Giudiziaria</option>
+                                <option value="opzione3">Consolidamento debiti</option>
+                            </select>
+                        </div>
+                        <div id="finalita-prestito" class='form-element'>
+                            <label for='prestito'>Finalità del Prestito</label>
+                            <select id="prestito-menu" name="menu">
+                                <option value="opzione1">Ristrutturazione casa</option>
+                                <option value="opzione2">Liquidità</option>
+                                <option value="opzione3">Consolidamento</option>
+                                <option value="opzione4">Veicolo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class='set'>
+                        <div class='form-element'>
+                            <label for='nome'>Nome e Cognome</label>
+                            <input id='nome' placeholder="es: Carlotta Bianchi" type='text'>
+                        </div>
+                        <div class='form-element'>
+                            <label for='nascita'>Data di nascita</label>
+                            <input id='nascita' placeholder='GG/MM/AAAA' type='date'>
+                        </div>
+                    </div>
+                    <div class='set'>
+                        <div class='form-element'>
+                            <label for='telefono'>Numero di telefono</label>
+                            <input id='telefono' placeholder='+39' type='tel'>
+                        </div>
+                        <div class='form-element'>
+                            <label for='email'>Email</label>
+                            <input id='email' placeholder="email@email.com" type='text'>
+                        </div>
+                    </div>
+
+                </header>
+                <footer>
+                    <div class='set'>
+                        <button id='next'>Invia</button>
+                    </div>
+                </footer>
+            </div>
+        </div>
         <div class="who">
             <h2 class="chi">Servizi e Prodotti Offerti</h2>
             <div class="who-content">
 
-                <div class="faq-item">
+                <div class="who-item">
                     <img src="mutuo.jpeg" alt="mutuo">
                     <h3>Mutuo</h3>
                     <p>Consulenza finanziaria personalizzata per accedere
                         al mutuo in modo rapido e sicuro. Supporto continuo.</p>
+                    <button class="hero-button">Maggiori informazioni</button>
                 </div>
-                <div class="faq-item">
+                <div class="who-item">
                     <img src="csq.jpeg">
                     <h3>Finanziamento e CQS</h3>
                     <p>Consulenza finanziaria sia per il privati
                         che per le aziende, per accedere ai prestiti e cessioni del quinto.</p>
+                    <button class="hero-button">Maggiori informazioni</button>
                 </div>
-                <div class="faq-item">
+                <div class="who-item">
                     <img src="leasing.jpg">
                     <h3>Leasing e Vitalizio</h3>
-                    <p>Consulenza aziendale volta all'accessione al Leasing di qualsiasi importo
+                    <p>Consulenza volta all'accessione al Leasing di qualsiasi importo
                         e la consulenza ai clienti privati Over60 per il Vitalizio</p>
+                    <button class="hero-button">Maggiori informazioni</button>
                 </div>
             </div>
         </div>
 
+        <div class="faq-container">
+            <h1>Domande frequenti</h1>
+            <section class="accordion" id="overview">
+                <h2 class="title"><a href="#overview">Quali sono i vostri servizi principali?</a></h2>
+                <div class="content">
+                    <div class="wrapper">
+                        <p>
+                            I nostri servizi principali si basano sulla consulenza finanziaria,
+                            sia ai privati che alle aziende, al fine di ottenimento del mutuo,
+                            finanziamento breve, cessione del quinto, leasing e vitalizio.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-        <h2 class="who">Contattaci</h2>
-        <div class="contacts">
-            <form class="form" method="POST">
-                <div class="form-element">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome"  required>
-                </div>
+            <section class="accordion" id="how-does-it-work">
+                <h2 class="title"><a href="#how-does-it-work">La prima consulenza è veramente gratuita?</a></h2>
+                <div class="content">
+                    <div class="wrapper">
+                        <p>
+                            Sì, la prima consulenza è sempre gratuita e senza impegno.
 
-                <div class="form-element">
-                    <label for="cognome">Cognome</label>
-                    <input type="text" id="cognome" name="cognome" required>
+                        </p>
+                    </div>
                 </div>
+            </section>
 
-                <div class="form-element">
-                    <label for="telefono">Numero di telefono</label>
-                    <input type="tel" id="telefono" name="telefono" required>
+            <section class="accordion" id="inspiration">
+                <h2 class="title"><a href="#inspiration">Come posso contattarvi?</a></h2>
+                <div class="content">
+                    <div class="wrapper">
+                        <p>
+                            Puoi compilare il nostro modulo e verrai contattato da uno dei nostri consulenti iscritti
+                            all'OAM (Organizzazione degli Agenti e Mediatori).
+                        </p>
+                    </div>
                 </div>
-
-                <div class="form-element">
-                    <label for="prodotto">Prodotto</label>
-                    <select id="prodotto" name="prodotto">
-                        <option value="mutuo">Mutuo</option>
-                        <option value="prestito">Prestito</option>
-                        <option value="dimmi-te">Dimmi te</option>
-                    </select>
-                </div>
-
-                <div class="form-element">
-                    <label for="cifra">Cifra richiesta</label>
-                    <input type="number" id="cifra" name="cifra" required>
-                </div>
-
-                <div class="form-element">
-                    <label for="messaggio">Messaggio</label>
-                    <textarea id="messaggio" name="messaggio" required></textarea>
-                </div>
-
-                <div class="submit-container">
-                    <button class="submit" type="submit">Invia</button>
-                </div>
-
-            </form>
-            <div class="info-contatti">
-                <div class="info-box">
-                    <h3>Indirizzo</h3>
-                    <p>Via Roma, 55, Firenze, FI</p>
-                </div>
-                <div class="info-box">
-                    <h3>Numero di telefono</h3>
-                    <p>+39 323232322</p>
-                </div>
-                <div class="info-box">
-                    <h3>Email</h3>
-                    <p>tizio@email.it</p>
-                </div>
-                <div class="info-box">
-                    <h3>Email</h3>
-                    <p>tizio@email.it</p>
-                </div>
-            </div>
+            </section>
         </div>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Gratis Consulenza Finanziaria. Tutti i diritti riservati.</p>
-    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const heroContent = document.querySelector('.hero-content');
+            const importoInput = document.getElementById('importo');
+            const prestitoRadio = document.getElementById('prestito');
+            const anniSelect = document.getElementById('anni');
+            const allOptions = anniSelect.innerHTML; // Save all options for later use
+
+
+
+            // Funzione per mostrare o nascondere il blocco di contenuto "Mutuo"
+            function toggleMutuoContent() {
+                const mutuoContent = document.getElementById('finalita-mutuo');
+                const isMutuoChecked = document.getElementById('mutuo').checked;
+                if (isMutuoChecked) {
+                    mutuoContent.style.display = 'block';
+                } else {
+                    mutuoContent.style.display = 'none';
+                }
+            }
+            function togglePrestitoContent() {
+                const prestitoContent = document.getElementById('finalita-prestito');
+                const isPrestitoChecked = document.getElementById('prestito').checked;
+                if (isPrestitoChecked) {
+                    prestitoContent.style.display = 'block';
+                } else {
+                    prestitoContent.style.display = 'none';
+                }
+            }
+            function updateDurataOptions() {
+                const selectedProduct = document.querySelector('input[name="prodotto"]:checked').value;
+                anniSelect.innerHTML = ''; // Rimuovi tutte le opzioni
+
+                if (selectedProduct === 'prestito') {
+                    // Aggiungi solo le opzioni fino a 10 anni
+                    allOptions.filter(option => parseInt(option.value, 10) <= 10).forEach(option => {
+                        anniSelect.add(option.cloneNode(true));
+                    });
+                } else {
+                    // Aggiungi tutte le opzioni
+                    allOptions.forEach(option => {
+                        anniSelect.add(option.cloneNode(true));
+                    });
+                }
+            }
+
+
+            function formatCurrency(value) {
+                let cleanValue = value.replace(/[^\d]/g, '');
+
+                // Converte in numero intero
+                const numberValue = parseInt(cleanValue, 10);
+
+                if (isNaN(numberValue)) {
+                    return '';
+                }
+
+                // Formatta il numero con il separatore delle migliaia
+                return '€'+ numberValue.toLocaleString('it-IT');
+            }
+
             heroContent.addEventListener('animationend', () => {
                 heroContent.classList.add('animated');
             });
+
+            importoInput.addEventListener('input', function() {
+                // Ottieni il valore formattato
+                const formattedValue = formatCurrency(importoInput.value);
+                // Imposta il valore formattato nel campo di input
+                importoInput.value = formattedValue;
+            });
+
+            prestitoRadio.addEventListener('change', () => {
+                if (prestitoRadio.checked) {
+                    anniSelect.innerHTML = `
+                    <option value="1">1 anno</option>
+                    <option value="2">2 anni</option>
+                    <option value="3">3 anni</option>
+                    <option value="4">4 anni</option>
+                    <option value="5">5 anni</option>
+                    <option value="6">6 anni</option>
+                    <option value="7">7 anni</option>
+                    <option value="8">8 anni</option>
+                    <option value="9">9 anni</option>
+                    <option value="10">10 anni</option>
+                `;
+                }
+            });
+
+            // Event listeners for other radio buttons to reset the select options
+            const otherRadios = document.querySelectorAll('input[name="prodotto"]:not(#prestito)');
+            otherRadios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    if (radio.checked) {
+                        anniSelect.innerHTML = allOptions;
+                    }
+                });
+            });
+
+            // Aggiungi event listener per le opzioni radio
+            document.querySelectorAll('input[name="prodotto"]').forEach(function(radio) {
+                radio.addEventListener('change', toggleMutuoContent);
+                radio.addEventListener('change', togglePrestitoContent);
+            });
+
+
+
+            // Controlla lo stato iniziale delle opzioni radio
+            toggleMutuoContent();
+            togglePrestitoContent()
+
         });
     </script>
+    </main>
 </body>
 </html>
